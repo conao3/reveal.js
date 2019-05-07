@@ -294,6 +294,12 @@ body {
   font-size: 0.8em;
   margin-top: -0.5em; }
 
-.reveal pre {
+.reveal pre, .reveal code, .reveal var, .reveal samp, .reveal kbd {
   background: #252932;
-  padding: 1em; }
+  font-family: Monaco, Consolas, 'Courier New', Courier, monospace;
+  padding: 0.3em;
+  font-size: 0.7em; }
+
+.reveal pre {
+  padding: 1em;
+  line-height: 1.3em; }
