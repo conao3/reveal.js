@@ -1,0 +1,94 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// sublime-brin theme
+$brin-background:     #2b303b;
+$brin-gutters:        #343d46;
+$brin-gutter-fg:      #65737e;
+$brin-gutters-active: #4f5b66;
+$brin-builtin:        #d08770;
+$brin-foreground:     #c0c5ce;
+$brin-invisibles:     #65737e;
+$brin-lineHighlight:  #343d46;
+$brin-selection:      #4f5b66;
+$brin-text:           #c0c5ce;
+$brin-comments:       #65737e;
+$brin-punctuation:    #c0c5ce;
+$brin-delimiters:     #c0c5ce;
+$brin-operators:      #c0c5ce;
+$brin-keywords:       #b48ead;
+$brin-variables:      #bf616a;
+$brin-functions:      #8fa1b3;
+$brin-methods:        #8fa1b3;
+$brin-strings:        #a3be8c;
+$brin-constants:      #d08770;
+$brin-white:          #ffffff;
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $brin-foreground;
+$backgroundColor: $brin-background;
+
+// Primary/body text
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFontSize: 42px;
+
+// Vertical spacing between blocks of text
+$blockMargin: 30px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+
+$headingTextTransform: none;
+
+// link
+$linkColor: $brin-methods;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+// fontsize
+$heading1Size: 2.0em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// slide-number
+.reveal .slide-number {zoom: 4;}
+.reveal .controls {margin-right: 3em; margin-bottom: 10em;}
+
+// title-slide
+.reveal .title    {font-size: 1.8em; margin-top: 1.2em;}
+.reveal .subtitle {font-size: 1.0em;}
+.reveal .author   {font-size: 1.4em; margin-top: 2.0em;}
+.reveal .date     {font-size: 1.2em;}
+.reveal .miscinfo {font-size: 0.8em; margin-top: -0.5em;}
+
+// pre
+.reveal pre, .reveal code, .reveal var, .reveal samp, .reveal kbd {
+    background: darken($brin-background, 3%);
+    font-family: Monaco, Consolas, 'Courier New', Courier, monospace;
+    padding: 0.3em;
+    font-size: 0.7em;
+}
+
+.reveal pre {
+    padding: 1em;
+    line-height: 1.3em;
+}
